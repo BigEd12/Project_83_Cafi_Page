@@ -1,0 +1,433 @@
+h1 {
+    font-family: 'Josefin Slab', serif;
+    font-weight: 500;
+}
+
+h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+p {
+    font-family: 'Lora', serif;
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar-dark {
+    background-color: #0D0D0D;
+    }
+
+#header {
+    font-family: 'Nunito', sans-serif;
+    color: #F2F2F2;
+}
+
+
+/*-------------------- LANDING --------------------*/
+#landing {
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position; center bottom;
+    height: 800px;
+}
+
+#landing h1 {
+    font-size: 600%;
+    color: #D5B4B4;
+    letter-spacing: 50px;
+}
+
+.title-header {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+    padding-top: 33%;
+}
+
+@media (max-width: 768px) {
+
+	#landing {
+    height: 600px;
+    transition: 1s;
+    }
+
+    #landing h1 {
+    font-size: 400%;
+    transition: 1s;
+    letter-spacing: 40px;
+    }
+
+
+}
+
+/*-------------------- FEATURES --------------------*/
+#features {
+    background-color: #0D0D0D;
+    padding: 1% 3%;
+    color: #F28F16;
+}
+
+.features-box {
+    padding: 5%;
+    text-align: center;
+}
+
+#features .fa-7x {
+    color: #D9751E;
+}
+
+#features .fa-7x:hover {
+    color: #8C5535;
+    transition: 1s;
+}
+
+.features-header {
+    padding: 5% 0;
+}
+
+/*-------------------- SELECTION --------------------*/
+
+#selection {
+    background-color: #8C5535;
+    text-align: center;
+    min-height: 300px;
+}
+
+.carousel-image {
+    width: 25%;
+    height: 25%;
+    border-radius: 5%;
+}
+
+.carousel-item {
+	padding: 7% 15%;
+}
+
+
+#selection p {
+    font-size: 120%;
+    padding-top: 1%;
+}
+
+#selection .carousel-caption {
+    margin-top: 2%;
+    bottom: 15px;
+}
+
+@media (max-width: 768px) {
+
+    .carousel-image {
+        width: 85%;
+        height: 180px;
+    }
+
+}
+
+/*-------------------- CALL TO ACTION --------------------*/
+#cta {
+    background-color: #0D0D0D;
+    padding: 5% 15%;
+    color: #F28F16;
+    text-align: center;
+}
+
+#cta h1 {
+    font-size: 400%;
+    font-weight: 700;
+    padding: 3% 0;
+}
+
+#cta h5 {
+    font-size: 300%;
+    font-style: italic;
+    font-weight: 200;
+    padding: 3%;
+}
+
+#cta .btn {
+    border-color: #F28F16;
+    color: #F28F16;
+}
+
+#cta .btn:hover {
+    background-color: #F28F16 !important;
+    color: #0D0D0D;
+    transition: 0.6s;
+}
+
+/*-------------------- FOOTER --------------------*/
+#footer {
+    background-color: #8C5535;
+    text-align: center;
+    padding-top: 3%;
+}
+
+#footer a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/*-------------------- CAFÉS --------------------*/
+#cafes {
+    background-color: #0D0D0D;
+    padding: 3% 15%;
+    color: #F28F16;
+}
+
+#cafes img {
+    width: 100%;
+    text-align: center;
+}
+
+#cafes h1 {
+    padding: 1% 0;
+}
+
+
+#cafes p {
+    padding: 2%;
+}
+
+#cafes .row {
+    padding-bottom: 2%;
+}
+
+#cafes .ol-12 {
+    border-bottom: 2%;
+}
+
+#cafes h5 {
+    text-align: center;
+}
+
+#cafes .alert-light {
+    background-color: #D5B4B4;
+    text-align: center;
+    color: #0D0D0D;
+    font-size: 120%;
+}
+
+.card {
+    background-color: #8C5535;
+    color: #0D0D0D;
+    padding: 2%;
+    height: 95%;
+    width: 100%;
+    transition: 1s;
+}
+
+@media (max-width: 992px) {
+
+    .maps-card {
+    height: 321px;
+    }
+}
+
+header.masthead {
+  background: no-repeat center bottom;
+  background-color: #868e96;
+  background-attachment: scroll;
+  position: relative;
+  background-size: cover;
+}
+
+header.masthead .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #212529;
+  opacity: 0.3;
+}
+
+.cafe-name {
+    padding: 15% 0 15%;;
+    color: #F2F2F2 !important;
+}
+
+.cafe-name h1 {
+    font-size: 550% !important;
+    text-align: center;
+}
+
+.personal {
+    font-weight: 200;
+    font-style: italic;
+}
+
+.personal-check {
+    margin-top: 7%;
+    text-align: center;
+    color: #F28F16;
+}
+
+.cafe-map iframe{
+    left: 1.5%;
+    top: 1.5%;
+    height: 281px;
+    width: 95%;
+    position: absolute;
+    border-radius: 5%;
+}
+
+#cafes img:hover{
+   transform: scale(2);
+   transition: 2s;
+   z-index: -1;
+ }
+
+ .alert .table {
+    font-size: 85%;
+    padding: 5px;
+ }
+
+/* TEMPLATE RESPONSIVENESS */
+@media (max-width: 768px) {
+
+    .at-a-glance p{
+    font-size: 70%;
+    margin-bottom: 0 !important;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .at-a-glance p{
+    font-size: 70%;
+    margin-bottom: 0 !important;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    }
+}
+
+/*-------------------- ADD CAFÉ --------------------*/
+#add-cafe {
+    padding: 3%;
+    background-color: #8C5535;
+    color: #F2F2F2;
+}
+
+/*-------------------- ALL CAFÉS --------------------*/
+#all-cafes-header {
+    background-color: #8C5535;
+    padding: 3%;
+}
+
+#all-cafes-template {
+    background-color: #0D0D0D;
+    padding: 3%;
+    color: #0D0D0D;
+}
+
+#all-cafes-template h5 {
+    color: #0D0D0D;
+}
+
+#all-cafes-template p {
+    color: #0D0D0D;
+}
+
+#all-cafes-template hr {
+    margin-top: 1px;
+    color: #0D0D0D;
+}
+
+#all-cafes-template img{
+    border-radius: 5%;
+    max-height: 175px;
+    max-width: 175px;
+}
+
+@media (min-width: 768px) {
+
+    #all-cafes-template img{
+    border-radius: 5%;
+    width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #all-cafes-template img{
+    border-radius: 5%;
+    width: 90%;
+    }
+}
+
+#all-cafes-template .card{
+    width: 100%;
+    background-color: #D5B4B4;
+    border-width: 4px;
+    border-color: #F28F16;
+}
+
+#all-cafes-template .card-body{
+    margin-left: 1%;
+}
+
+
+
+#all-cafes-header iframe {
+    height: 570px;
+    width: 1024px;
+    border-radius: 5%;
+    border-left: auto;
+    transition: 1s;
+}
+
+
+
+.map-content {
+    text-align: center;
+}
+
+@media (max-width: 1270px) {
+
+    #all-cafes-header iframe {
+    height: 450px;
+    width: 846px;
+    }
+}
+
+@media (max-width: 1024px) {
+
+    #all-cafes-header iframe {
+    height: 341px;
+    width: 655px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #all-cafes-header iframe {
+    height: 285px;
+    width: 550px;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #all-cafes-header iframe {
+    height: 275px;
+    width: 498px;
+    }
+}
+
+@media (max-width: 538px) {
+
+    #all-cafes-header iframe {
+    height: 160px;
+    width: 300px;
+    }
+}
