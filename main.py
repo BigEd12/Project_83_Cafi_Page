@@ -285,7 +285,7 @@ def all_cafes():
 
 if __name__ == "__main__":
     app.run(debug=True)
-=======
+
 from flask import Flask, render_template, url_for, redirect, request
 from flask_bootstrap import Bootstrap
 import datetime
