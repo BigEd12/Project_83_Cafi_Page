@@ -1,5 +1,10 @@
 {% include "header.html" %}
 
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cafe.name }} | Murcia Café Details | CaFi</title>
+    <meta name="description" content="Get detailed information about {{ cafe.name }} in Murcia. Find out about its amenities, opening times, seating availability, Wi-Fi speeds, and more. Plan your visit to this café and enjoy a productive work or study session">
+</head>
 
 <!---------- HEADER---------->
     <header class="masthead" style="background-image: url('{{ url_for('static', filename='images/cafes/' + cafe_name + '/1.jpg') }}')">
