@@ -180,10 +180,43 @@ a {
     color: #F28F16;
 }
 
-#cafes img {
-    width: 100%;
-    text-align: center;
+.thumbnail {
+  height: 200px; /* Set the desired height */
+  width: 200px; /* Set the desired width */
+  overflow: hidden; /* Hide any overflow beyond the defined dimensions */
 }
+
+.thumbnail img {
+  object-fit: cover; /* Scale and crop the image to fit the thumbnail dimensions */
+  height: 100%;
+  width: 100%;
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+.lightbox img {
+    display: block;
+    max-height: 90vh;
+    max-width: 90vw;
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
 
 #cafes h1 {
     padding: 1% 0;
@@ -277,11 +310,6 @@ header.masthead .overlay {
     border-radius: 5%;
 }
 
-#cafes img:hover{
-   transform: scale(2);
-   transition: 2s;
-   z-index: -1;
- }
 
  .alert .table {
     font-size: 85%;
