@@ -132,6 +132,12 @@ def time_value(time):
         value_2 = int((int(hour_2) * 60) + int(min_2))
         return [value_1, value_2]
 
+
+@app.after_request
+def add_header(response):
+    response.headers['X-Robots-Tag'] = 'index, follow'
+    return response
+
 @app.context_processor
 def inject_year():
     year = datetime.datetime.now().strftime('%Y')
