@@ -1,0 +1,93 @@
+{% include "header.html" %}
+
+<body>
+    <section id="landing">
+        <div class="title-header">
+            <h1>Find Your Spot</h1>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="row">
+            <div class="features-box col-lg-4 col-md-12">
+                <i class="fa-solid fa-mug-hot fa-7x"></i>
+                <h3 class="features-header">Amenities</h3>
+                <p class="features-para">From coffee shops to bars, find new places to work or study, based on your needs.</p>
+                <p class="features-para"></p>
+            </div>
+            <div class="features-box col-lg-4 col-md-12">
+                <i class="fa-solid fa-info fa-7x"></i>
+                <h3 class="features-header">Need to know</h3>
+                <p class="features-para">We've included information on opening times, seating, power sockets, location, website and more.</p>
+            </div>
+            <div class="features-box col-lg-4 col-md-12">
+                <i class="fa-solid fa-wifi fa-7x"></i>
+                <h3 class="features-header">Wi-Fi Strength</h3>
+                <p class="features-para">Need Wi-Fi? We've checked everywhere listed, with up-to-date speeds listed if Wi-Fi is available.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="selection">
+        <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <a href="{{ url_for('cafes', cafe=cafe_1.id) }}">
+                        <img src="{{ url_for('static', filename='images/cafes/' + cafe_1.name + '/' + cafe_1.logo_image_path) }}" class="carousel-image" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>{{ cafe_1.name }}</h3>
+                        </div>
+                    </a>
+                </div>
+                {% for cafe in cafes %}
+                {% if cafe.id != 1 %}
+                <div class="carousel-item" data-bs-interval="10000">
+                    <a href="{{ url_for('cafes', cafe=cafe.id) }}">
+                        <img src="{{ url_for('static', filename='images/cafes/' + cafe.name + '/' + cafe.logo_image_path) }}" class="carousel-image" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h3>{{ cafe.name }}</h3>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+                {% endfor %}
+
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section id="cta">
+        <div class="row">
+            <div class="col-12">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="coffee_beans">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h5>Find somewhere new now</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <a href="{{ url_for ('all_cafes') }}" class="btn btn-outline-light" role="button">Cafés</a>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+{% include "footer.html" %}
+</html>
