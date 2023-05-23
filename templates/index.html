@@ -8,10 +8,25 @@
 
 <body>
     <section id="landing">
-        <div class="title-header">
-            <h1>Find Your Spot</h1>
+        <div class="row">
+            <div class="col-6 image-column">
+                <div class="image-wrapper">
+                    <img src="/static/images/1.jpg" class="title-image i1" alt="">
+                </div>
+                <div class="image-wrapper">
+                    <img src="/static/images/2.jpg" class="title-image i2" alt="">
+                </div>
+                <div class="image-wrapper">
+                    <img src="/static/images/3.jpg" class="title-image i3" alt="">
+                </div>
+            </div>
+            <div class="col-6 title-column">
+                <h1>Find Your Spot</h1>
+            </div>
         </div>
     </section>
+
+
 
     <section id="features">
         <div class="row">
@@ -34,25 +49,18 @@
         </div>
     </section>
 
-    <section id="selection">
+
+    <section id="cta">
+
         <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
             <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                {% for cafe in cafes %}
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ loop.index }}"></button>
+                {% endfor %}
             </div>
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
-                    <a href="{{ url_for('cafes', cafe=cafe_1.id) }}">
-                        <img src="{{ url_for('static', filename='images/cafes/' + cafe_1.name + '/' + cafe_1.logo_image_path) }}" class="carousel-image" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>{{ cafe_1.name }}</h3>
-                        </div>
-                    </a>
-                </div>
                 {% for cafe in cafes %}
-                {% if cafe.id != 1 %}
-                <div class="carousel-item" data-bs-interval="10000">
+                <div class="carousel-item{% if loop.first %} active{% endif %}" data-bs-interval="10000">
                     <a href="{{ url_for('cafes', cafe=cafe.id) }}">
                         <img src="{{ url_for('static', filename='images/cafes/' + cafe.name + '/' + cafe.logo_image_path) }}" class="carousel-image" alt="...">
                         <div class="carousel-caption d-none d-md-block">
@@ -60,9 +68,7 @@
                         </div>
                     </a>
                 </div>
-                {% endif %}
                 {% endfor %}
-
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -73,14 +79,8 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-    </section>
 
-    <section id="cta">
-        <div class="row">
-            <div class="col-12">
-                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="coffee_beans">
-            </div>
-        </div>
+
         <div class="row">
             <div class="col-12">
                 <h5>Find somewhere new now</h5>
