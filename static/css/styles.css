@@ -57,7 +57,7 @@ a {
     border-radius: 50%;
     object-fit: cover;
     margin-left: 25%;
-    margin-top: 4%;
+    margin-top: 3%;
     transition: 1s ease-in-out;
     box-shadow: -4px -4px 8px 8px rgba(0, 0, 0, 0.2);
 }
@@ -143,6 +143,14 @@ h1 {
     padding: 5% 0;
 }
 
+#features h1 {
+    text-align: center;
+    margin-top: 4%;
+    letter-spacing: 10px;
+    font-size: 200%;
+    margin-right: auto;
+}
+
 
 /*-------------------- CALL TO ACTION --------------------*/
 #cta {
@@ -153,9 +161,11 @@ h1 {
 }
 
 #cta h1 {
-    font-size: 400%;
-    font-weight: 700;
-    padding: 3% 0;
+    text-align: center;
+    margin-top: 4%;
+    letter-spacing: 10px;
+    font-size: 200%;
+    margin-right: auto;
 }
 
 #cta h5 {
@@ -220,9 +230,9 @@ h1 {
 
 /*-------------------- CAFÉS --------------------*/
 #cafes {
-    background-color: #0D0D0D;
+    background-color: var(--primary-color);
     padding: 3% 15%;
-    color: #F28F16;
+    color: #000000;
 }
 
 .thumbnail {
@@ -285,15 +295,15 @@ h1 {
 }
 
 #cafes .alert-light {
-    background-color: #D5B4B4;
+    background-color: var(--secondary-color);
     text-align: center;
-    color: #0D0D0D;
+    color: #000000;
     font-size: 120%;
 }
 
 .card {
-    background-color: #8C5535;
-    color: #0D0D0D;
+    background-color: var(--primary-color);
+    color: #000000;
     padding: 2%;
     height: 95%;
     width: 100%;
@@ -343,7 +353,7 @@ header.masthead .overlay {
 .personal-check {
     margin-top: 7%;
     text-align: center;
-    color: #F28F16;
+    color: #000000;
 }
 
 .cafe-map iframe{
@@ -393,27 +403,27 @@ header.masthead .overlay {
 
 /*-------------------- ALL CAFÉS --------------------*/
 #all-cafes-header {
-    background-color: #8C5535;
+    background-color: var(--primary-color);
     padding: 3%;
 }
 
 #all-cafes-template {
-    background-color: #0D0D0D;
+    background-color: var(--secondary-color);
     padding: 3%;
-    color: #0D0D0D;
+    color: #000000;
 }
 
 #all-cafes-template h5 {
-    color: #0D0D0D;
+    color: #000000;
 }
 
 #all-cafes-template p {
-    color: #0D0D0D;
+    color: #000000;
 }
 
 #all-cafes-template hr {
     margin-top: 1px;
-    color: #0D0D0D;
+    color: #000000;
 }
 
 #all-cafes-template img{
@@ -440,9 +450,9 @@ header.masthead .overlay {
 
 #all-cafes-template .card{
     width: 100%;
-    background-color: #D5B4B4;
-    border-width: 4px;
-    border-color: #F28F16;
+    background-color: var(--primary-color);
+    border-width: 2px;
+    border-color: #FFFFFF;
 }
 
 #all-cafes-template .card-body{
