@@ -413,6 +413,10 @@ header.masthead .overlay {
     color: #000000;
 }
 
+#all-cafes-template h3 {
+    text-align: center;
+}
+
 #all-cafes-template h5 {
     color: #000000;
 }
