@@ -473,10 +473,27 @@ header.masthead .overlay {
     transition: 1s;
 }
 
-
-
 .map-content {
     text-align: center;
+}
+
+.box {
+  max-width: 250px;
+  margin: 20px auto;
+  background: var(--primary-color);
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+.item {
+  min-height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+input[type="checkbox"] {
+  margin: 10px 20px;
 }
 
 @media (max-width: 1270px) {
