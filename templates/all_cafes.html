@@ -34,11 +34,29 @@
                     <input type="checkbox" id="wifi-filter">
                 </div>
             </div>
+
+            <div class="col-3">
+                <div>
+                    <label for="power-filter">Power:</label>
+                    <input type="checkbox" id="power-filter">
+                </div>
+            </div>
+
+            <div class="col-3">
+                <div>
+                    <label for="all-filter">All:</label>
+                    <input type="checkbox" id="all-filter">
+                </div>
+            </div>
         </div>
 
         <div class="row">
             {% for cafe in cafes %}
-            <div class="col-12 col-lg-4 col-md-6 {% if cafe.open_status == 'Open' %}open-cafe{% endif %}{% if cafe.wifi_down != 'n/a' %} wifi-cafe{% endif %}">
+            <div class="col-12 col-lg-4 col-md-6
+            {% if cafe.open_status == 'Open' %}open-cafe{% endif %}
+            {% if cafe.wifi_down != 'n/a' %} wifi-cafe{% endif %}
+            {% if cafe.power_rating != '✘' %}power-cafe{% endif %}
+            ">
                 <div class="card mb-3">
                     <div class="row g-0">
                         <div class="col-4">
