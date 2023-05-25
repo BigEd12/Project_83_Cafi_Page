@@ -46,10 +46,16 @@ a {
 /*-------------------- LANDING --------------------*/
 #landing {
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: #FFFFFF;
     padding: 20px;
 }
 
+.container {
+  margin: 5px;
+  max-width: 1200px;
+  background-color: var(--secondary-color);
+  border-radius: 2%;
+}
 
 .title-image {
     width: 250px;
