@@ -68,7 +68,7 @@ a {
 
 /*-------------------- LANDING --------------------*/
 #landing {
-    align-items: center;
+
     background-color: #FFFFFF;
     padding: 0.5% 3%;
     display: flex;
@@ -114,42 +114,54 @@ h1 {
     transition: 1s ease-in-out;
 }
 
+
 @media (max-width: 768px) {
 
-    .title-column {
-        margin-top: 7%;
+    #landing {
+        height: 30vh;
+
+    }
+    #landing .container {
+        height: auto
+        margin-bottom: 5px;
     }
 
-    .title-image {
-        width: 150px;
-        height: 150px;
-        margin-left: 25%;
-        box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.2);
-    }
+  .title-column {
+    margin-top: 5%; /* Adjust the margin-top to move the title higher */
+  }
 
-    h1 {
-        font-size: 4rem;
-        letter-spacing: 40px;
-    }
+  .title-image {
+    width: 100px; /* Adjust the size of the image */
+    height: 100px; /* Adjust the size of the image */
+    margin-left: 25%;
+    margin-top: 5%; /* Adjust the margin-top to move the image higher */
+    box-shadow: 0px 2px 4px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    font-size: 4rem;
+    letter-spacing: 40px;
+    margin-right: 0; /* Remove the right margin */
+    margin-top: 0; /* Remove the top margin */
+  }
 }
 
 @media (max-width: 576px) {
+  .title-column {
+    margin-top: 10%; /* Adjust the margin-top to move the title higher */
+  }
 
-    .title-column {
-        margin-top: 17%;
-    }
+  .title-image {
+    width: 50px; /* Adjust the size of the image */
+    height: 50px; /* Adjust the size of the image */
+    margin-left: 35%;
+    margin-top: 15%; /* Adjust the margin-top to move the image higher */
+  }
 
-    .title-image {
-        width: 75px;
-        height: 75px;
-        margin-left: 35%;
-        margin-top: 23%
-    }
-
-    h1 {
-        font-size: 3rem;
-        letter-spacing: 10px;
-    }
+  h1 {
+    font-size: 3rem;
+    letter-spacing: 10px;
+  }
 }
 
 
@@ -160,6 +172,8 @@ h1 {
     justify-content: center;
     display: flex;
 }
+
+
 
 .features-box {
     padding: 3%;

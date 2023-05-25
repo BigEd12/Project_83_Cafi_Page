@@ -100,46 +100,34 @@
     </section>
 
 <script>
-    // Function to check if an element is in the viewport
-    function isElementInViewport(element) {
-        var rect = element.getBoundingClientRect();
-        return (
-          rect.top >= 0 &&
-          rect.left >= 0 &&
-          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-
-    // Function to handle the scroll event
-    function handleScroll() {
-        var fadeElements = document.getElementsByClassName('fade-in');
-
-        for (var i = 0; i < fadeElements.length; i++) {
-            if (isElementInViewport(fadeElements[i])) {
-              fadeElements[i].classList.add('visible');
-            }
+    // Function to handle the intersection observer callback
+    function handleIntersection(entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
         }
+      });
     }
 
-    // Function to handle the initial visibility check
-    function handleInitialVisibility() {
-        var fadeElements = document.getElementsByClassName('fade-in');
+    // Function to set up the intersection observer
+    function setupIntersectionObserver() {
+      var fadeElements = document.getElementsByClassName('fade-in');
+      var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.3
+      };
 
-        for (var i = 0; i < fadeElements.length; i++) {
-          if (isElementInViewport(fadeElements[i])) {
-            fadeElements[i].classList.add('visible');
-          }
-        }
+      var observer = new IntersectionObserver(handleIntersection, options);
 
-        // Remove the initial visibility check handler after it's been executed
-        window.removeEventListener('DOMContentLoaded', handleInitialVisibility);
+      for (var i = 0; i < fadeElements.length; i++) {
+        observer.observe(fadeElements[i]);
+      }
     }
 
-    // Attach the scroll event listener
-    window.addEventListener('scroll', handleScroll);
-    // Attach the DOMContentLoaded event listener to handle initial visibility check
-    window.addEventListener('DOMContentLoaded', handleInitialVisibility);
+    // Attach the setupIntersectionObserver function to the DOMContentLoaded event
+    window.addEventListener('DOMContentLoaded', setupIntersectionObserver);
 
 </script>
 
