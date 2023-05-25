@@ -94,3 +94,8 @@ function openLightbox(imageSrc) {
 
       lightbox.removeEventListener('click', closeLightbox);
     }
+
+
+
+
+

@@ -26,12 +26,23 @@ a {
 }
 
 .navbar-dark {
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
     }
 
 #header {
     font-family: 'Nunito', sans-serif;
     color: #000000;
+    padding: 0.5% 3%;
+}
+
+#header .container {
+    margin: 0 auto;
+    border-radius: 2%;
+    background-color: var(--secondary-color);
+}
+
+.navbar {
+    border-radius: 25%;
 }
 
 #header a {
@@ -43,11 +54,23 @@ a {
 }
 
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /*-------------------- LANDING --------------------*/
 #landing {
     align-items: center;
     background-color: #FFFFFF;
-    padding: 20px;
+    padding: 0.5% 3%;
     display: flex;
     justify-content: center;
     height: 90vh;
@@ -58,6 +81,7 @@ a {
   max-width: 85vw;
   background-color: var(--primary-color);
   border-radius: 2%;
+  box-shadow: -4px -4px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .title-image {
@@ -66,17 +90,19 @@ a {
     border-radius: 50%;
     object-fit: cover;
     margin-left: 25%;
-    margin-top: 3%;
+    margin-top: 2%;
     transition: 1s ease-in-out;
     box-shadow: -4px -4px 8px 8px rgba(0, 0, 0, 0.2);
 }
 
 .i2 {
     margin-left: 40%;
+
 }
 
 .i3 {
     margin-left: 55%;
+    margin-bottom: 2%;
 }
 
 h1 {
@@ -129,13 +155,14 @@ h1 {
 
 /*-------------------- FEATURES --------------------*/
 #features {
-    background-color: var(--secondary-color);
-    padding: 1% 3%;
+    padding: 0.5% 3%;
     color: #000000;
+    justify-content: center;
+    display: flex;
 }
 
 .features-box {
-    padding: 5%;
+    padding: 3%;
     text-align: center;
 }
 
@@ -154,27 +181,31 @@ h1 {
 
 #features h1 {
     text-align: center;
-    margin-top: 4%;
+    margin-top: 3%;
     letter-spacing: 10px;
     font-size: 200%;
     margin-right: auto;
 }
 
+#features .container {
+    background-color: var(--secondary-color);
+}
 
 /*-------------------- CALL TO ACTION --------------------*/
 #cta {
-    background-color: var(--primary-color);
-    padding: 3% 15%;
+    padding: 0.5% 3%;
     color: #000000;
     text-align: center;
+    justify-content: center;
+    display: flex;
 }
 
 #cta h1 {
     text-align: center;
-    margin-top: 4%;
     letter-spacing: 10px;
     font-size: 200%;
     margin-right: auto;
+    margin-top: 1%;
 }
 
 #cta h5 {
@@ -187,6 +218,7 @@ h1 {
 #cta .btn {
     border-color: #000000;
     color: #000000;
+    margin-bottom: 3%;
 }
 
 #cta .btn:hover {
@@ -227,14 +259,19 @@ h1 {
 
 /*-------------------- FOOTER --------------------*/
 #footer {
-    background-color: var(--secondary-color);
     text-align: center;
-    padding-top: 3%;
+    padding: 0.5% 3%;
+    justify-content: center;
+    display: flex;
 }
 
 #footer a {
     color: inherit;
     text-decoration: none;
+}
+
+#footer .container {
+    background-color: var(--secondary-color)
 }
 
 /*-------------------- CAFÉS --------------------*/

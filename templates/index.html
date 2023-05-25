@@ -8,7 +8,7 @@
 
 <body>
     <section id="landing">
-        <div class="container">
+        <div class="container fade-in">
             <div class="row">
                 <div class="col-6 image-column">
                     <div class="image-wrapper">
@@ -31,73 +31,119 @@
 
 
     <section id="features">
-        <h1>Looking for somewhere to study or work?</h1>
-        <div class="row">
-            <div class="features-box col-lg-4 col-md-12">
-                <i class="fa-solid fa-mug-hot fa-7x"></i>
-                <h3 class="features-header">Amenities</h3>
-                <p class="features-para">From coffee shops to bars, find new places to work or study, based on your needs.</p>
-                <p class="features-para"></p>
-            </div>
-            <div class="features-box col-lg-4 col-md-12">
-                <i class="fa-solid fa-info fa-7x"></i>
-                <h3 class="features-header">Need to know</h3>
-                <p class="features-para">Information on opening times, seating, power sockets, location, website and more.</p>
-            </div>
-            <div class="features-box col-lg-4 col-md-12">
-                <i class="fa-solid fa-wifi fa-7x"></i>
-                <h3 class="features-header">Wi-Fi Strength</h3>
-                <p class="features-para">Need Wi-Fi? We've checked everywhere listed, with up-to-date speeds listed if Wi-Fi is available.</p>
+        <div class="container fade-in">
+            <h1>Looking for somewhere to study or work?</h1>
+            <div class="row">
+                <div class="features-box col-lg-4 col-md-12">
+                    <i class="fa-solid fa-mug-hot fa-7x"></i>
+                    <h3 class="features-header">Amenities</h3>
+                    <p class="features-para">From coffee shops to bars, find new places to work or study, based on your needs.</p>
+                    <p class="features-para"></p>
+                </div>
+                <div class="features-box col-lg-4 col-md-12">
+                    <i class="fa-solid fa-info fa-7x"></i>
+                    <h3 class="features-header">Need to know</h3>
+                    <p class="features-para">Information on opening times, seating, power sockets, location, website and more.</p>
+                </div>
+                <div class="features-box col-lg-4 col-md-12">
+                    <i class="fa-solid fa-wifi fa-7x"></i>
+                    <h3 class="features-header">Wi-Fi Strength</h3>
+                    <p class="features-para">Need Wi-Fi? We've checked everywhere listed, with up-to-date speeds listed if Wi-Fi is available.</p>
+                </div>
             </div>
         </div>
     </section>
 
 
     <section id="cta">
-        <h1>How does it work?</h1>
-        <p>Choose a specific café, or browse by area</p>
-
-        <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                {% for cafe in cafes %}
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ loop.index }}"></button>
-                {% endfor %}
-            </div>
-            <div class="carousel-inner">
-                {% for cafe in cafes %}
-                <div class="carousel-item{% if loop.first %} active{% endif %}" data-bs-interval="10000">
-                    <a href="{{ url_for('cafes', cafe=cafe.id) }}">
-                        <img src="{{ url_for('static', filename='images/cafes/' + cafe.name + '/' + cafe.logo_image_path) }}" class="carousel-image" alt="...">
-                        <div class="carousel-caption d-none d-md-block">
-                            <h3>{{ cafe.name }}</h3>
-                        </div>
-                    </a>
+        <div class="container fade-in">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    {% for cafe in cafes %}
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active" aria-current="true"{% endif %} aria-label="Slide {{ loop.index }}"></button>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+                <div class="carousel-inner">
+                    {% for cafe in cafes %}
+                    <div class="carousel-item{% if loop.first %} active{% endif %}" data-bs-interval="10000">
+                        <a href="{{ url_for('cafes', cafe=cafe.id) }}">
+                            <img src="{{ url_for('static', filename='images/cafes/' + cafe.name + '/' + cafe.logo_image_path) }}" class="carousel-image" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h3>{{ cafe.name }}</h3>
+                            </div>
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
 
 
-        <div class="row">
-            <div class="col-12">
-                <h1>Explore Murcia</h1>
+            <div class="row">
+                <div class="col-12">
+                    <h1>Explore Murcia</h1>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <a href="{{ url_for ('all_cafes') }}" class="btn btn-outline-light" role="button">Cafés</a>
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-12">
-                <a href="{{ url_for ('all_cafes') }}" class="btn btn-outline-light" role="button">Cafés</a>
-            </div>
-        </div>
-
     </section>
+
+<script>
+    // Function to check if an element is in the viewport
+    function isElementInViewport(element) {
+        var rect = element.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to handle the scroll event
+    function handleScroll() {
+        var fadeElements = document.getElementsByClassName('fade-in');
+
+        for (var i = 0; i < fadeElements.length; i++) {
+            if (isElementInViewport(fadeElements[i])) {
+              fadeElements[i].classList.add('visible');
+            }
+        }
+    }
+
+    // Function to handle the initial visibility check
+    function handleInitialVisibility() {
+        var fadeElements = document.getElementsByClassName('fade-in');
+
+        for (var i = 0; i < fadeElements.length; i++) {
+          if (isElementInViewport(fadeElements[i])) {
+            fadeElements[i].classList.add('visible');
+          }
+        }
+
+        // Remove the initial visibility check handler after it's been executed
+        window.removeEventListener('DOMContentLoaded', handleInitialVisibility);
+    }
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+    // Attach the DOMContentLoaded event listener to handle initial visibility check
+    window.addEventListener('DOMContentLoaded', handleInitialVisibility);
+
+</script>
+
+<script src="{{ url_for('static', filename='app.js') }}"></script>
 </body>
 
 {% include "footer.html" %}
